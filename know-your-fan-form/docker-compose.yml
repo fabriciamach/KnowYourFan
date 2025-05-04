@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: src/server/Dockerfile
+    container_name: knowyourfan-back
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - TWITCH_CLIENT_ID=${TWITCH_CLIENT_ID}
+      - TWITCH_CLIENT_SECRET=${TWITCH_CLIENT_SECRET}
+      - TWITCH_REDIRECT_URI=http://backend:8000/callback
+      - TWITCH_FRONTEND_CALLBACK_URI=http://localhost:3000/callback
+
+  frontend:
+    build:
+      context: .
+      dockerfile: client/Dockerfile
+    container_name: knowyourfan-front
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
