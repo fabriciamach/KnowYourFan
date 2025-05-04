@@ -19,22 +19,29 @@ Aplicativo de formulários inteligente para engajamento de fãs da FURIA. Coleta
 - OpenAI API
 
 ## 🚀 Execução Local
+- Clona o repositório
+
 ```bash
-git clone https://github.com/seu-user/know-your-fan.git
+git clone https://github.com/your-repo/know-your-fan.git
 cd know-your-fan
-cd client
-npm install
-npm start
+```
+- Build e run Docker Compose
+  
+```bash
+docker-compose -f docker-compose.prod.yml up --build -d
 ```
 
-```python
-git clone https://github.com/seu-user/know-your-fan.git
-cd know-your-fan
-cd src
-cd server
-npm install
-npm start
-```
+## 🌐 Acessar aplicações
+
+- Frontend: http://localhost:3000
+
+- Backend API: http://localhost:8000
+
+- Adminer (DB management): http://localhost:8080
+
+## Requerimentos
+Criar as chaves através do:
+<link>https://dev.twitch.tv/console</link>
 
 ## Fluxograma
 
