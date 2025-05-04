@@ -16,7 +16,6 @@ Aplicativo de formulários inteligente para engajamento de fãs da FURIA. Coleta
 
 ### Backend (Futuro)
 - Python 3.10+
-- Flask
 - OpenAI API
 
 ## 🚀 Execução Local
